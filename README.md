@@ -1,5 +1,6 @@
 # data structures and algorithms
 
+~~~~
 [] Introduction
 [] Mathematics
 [] Bit Magic
@@ -24,4 +25,4 @@
 [] Trie
 [] Segment and Binary Indexed Tree
 [] Disjoint Set
-
+~~~~
