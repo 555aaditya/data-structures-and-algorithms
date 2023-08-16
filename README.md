@@ -24,3 +24,4 @@
 [] Trie
 [] Segment and Binary Indexed Tree
 [] Disjoint Set
+
