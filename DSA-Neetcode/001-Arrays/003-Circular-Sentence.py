@@ -1,16 +1,16 @@
 # 2490. Circular Sentence
 
 def isCircularSentence(sentence: str) -> bool:
-    check = False
+    check = True
 
-    if ' ' not in sentence:
-        check = sentence[0] == sentence[-1]
+    if sentence[0] != sentence[-1]:
+        check = False
 
-    for i in range(len(sentence)):
-        if ((sentence[i] == ' ') and (sentence[i-1] == sentence[i+1])):
-            check = True
+    for i in range(1,len(sentence)-1):
+        if ((sentence[i] == ' ') and (sentence[i-1] != sentence[i+1])):
+            check = False
     return check
         
 if __name__ == "__main__":
-    sentence = "eetcode"
+    sentence = "EDZVVYaYimHThFLmoHFGKCVPJTjVnBUnjhvFWijkHPxtWSWXAXXwDOjiTsPvRQIkxQZcGuKwWnctUjRwAibDlpfjZCYZdJFbjfUhffFdRhSRCcfJkCqYcPHYXhdOIzXdVwrxAKVXXQVSvMkIlfAbuKkyseWwAOLEnpMrcnDcWYcflAhAflHvJxgBYUKmeFHmrDZccVhtUEnVAwqnpUMgwtcFlsSddrzhOPLnjbzvmeMrCvqBJlAABUAdijMtebKTZMmNxtWqLIcsDsaepkmcOtVyBPR QMBUHrwRdOFsuIvjXLmnmpafbPPXXxWUWSGnhxjKOKH LhACwgqyvoaDmDgKAnmAAfJwnHsppIYrHxqEAFhAawCcHMHC WFOXITzBeNSgXBvRnwbTxogHKgbHBCylFSjjgkOMTHYoJdJLmHvXePjyGEALDI WgdgsRo o x"
     print(isCircularSentence(sentence))
